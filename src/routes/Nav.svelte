@@ -12,7 +12,12 @@
 >
 	{#each links as { title, href }}
 		<li>
-			<a class={'block px-8 py-4 '} class:bg-gray-300={$page.url.pathname == href} {href}>
+			<a
+				class={'block px-8 py-4 '}
+				class:bg-gray-300={$page.url.pathname == href}
+				{href}
+				data-sveltekit-noscroll
+			>
 				{title}
 			</a>
 		</li>
