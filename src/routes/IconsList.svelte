@@ -9,7 +9,8 @@
 				<img
 					src={iconSrc}
 					alt={href}
-					class={'h-14 w-auto ' + (iconSrc === 'logos/lexClips.jpg' ? 'rounded-full' : '')}
+					class:rounded-full={iconSrc == '/logos/lexClips.jpg'}
+					class="h-14 w-auto"
 				/>
 			</a>
 		</li>

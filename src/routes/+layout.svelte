@@ -11,7 +11,7 @@
 	import { socialIcons, supportIcons, links } from './data';
 </script>
 
-<main class="bg-gray-50 grid gap-y-36 text-center">
+<main class="bg-gray-50 grid gap-y-36 text-center pb-72">
 	<header>
 		<ul
 			class="mx-auto flex max-w-7xl rounded-b-3xl bg-gray-200  text-lg text-gray-700  [&>:nth-child(3)]:bg-gray-300 [&>:nth-child(4)]:ml-auto"
