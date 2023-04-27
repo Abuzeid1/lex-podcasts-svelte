@@ -23,7 +23,11 @@
 					loading="lazy"
 				/>
 			</a>
-			<a href={'/podcasts/' + encodeURIComponent(characterName)}>
+			<a
+				href={'/character/' + encodeURIComponent(characterName)}
+				data-sveltekit-noscroll
+				on:click={() => document.querySelector('h3')?.scrollIntoView()}
+			>
 				<span class="mt-4 block text-sm text-gray-500">
 					{characterName}
 				</span>

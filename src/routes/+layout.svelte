@@ -45,7 +45,7 @@
 	</section>
 
 	<section>
-		<h3 class="mb-5 font-serif text-3xl font-bold text-gray-900">Episodes</h3>
+		<h3 class="scroll-m-24 mb-5 font-serif text-3xl font-bold text-gray-900">Episodes</h3>
 		<Nav />
 		<slot />
 	</section>

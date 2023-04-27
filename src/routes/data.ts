@@ -23,43 +23,43 @@ const socialIcons = [
 	},
 	{
 		href: 'https://www.youtube.com/lexclips',
-		iconSrc: 'logos/lexClips.jpg'
+		iconSrc: '/logos/lexClips.jpg'
 	},
 	{
 		href: 'https://podcasts.apple.com/us/podcast/lex-fridman-podcast/id1434243584',
-		iconSrc: 'logos/podcast.svg'
+		iconSrc: '/logos/podcast.svg'
 	},
 	{
 		href: 'https://open.spotify.com/show/2MAi0BvDc6GTFvKFPXnkCL',
-		iconSrc: 'logos/spotify.svg'
+		iconSrc: '/logos/spotify.svg'
 	},
 	{
 		href: 'https://lexfridman.com/feed/podcast/',
-		iconSrc: 'logos/rss.svg'
+		iconSrc: '/logos/rss.svg'
 	},
 	{
 		href: 'https://twitter.com/LexFridman',
-		iconSrc: 'logos/twitter.svg'
+		iconSrc: '/logos/twitter.svg'
 	},
 	{
 		href: 'https://www.linkedin.com/in/lexfridman/',
-		iconSrc: 'logos/linkedIn.svg'
+		iconSrc: '/logos/linkedIn.svg'
 	},
 	{
 		href: 'https://www.instagram.com/lexfridman/',
-		iconSrc: 'logos/instagram.svg'
+		iconSrc: '/logos/instagram.svg'
 	},
 	{
 		href: 'https://www.facebook.com/lexfridman',
-		iconSrc: 'logos/facebook.svg'
+		iconSrc: '/logos/facebook.svg'
 	},
 	{
 		href: 'https://www.reddit.com/r/lexfridman/',
-		iconSrc: 'logos/reddit.svg'
+		iconSrc: '/logos/reddit.svg'
 	},
 	{
 		href: 'http://eepurl.com/dy1Obr',
-		iconSrc: 'logos/mailingList.svg'
+		iconSrc: '/logos/mailingList.svg'
 	}
 ];
 
@@ -2612,6 +2612,7 @@ const sortedPopularEpisodesIds = [
 	313, 300, 252, 122, 310, 336, 185, 345, 276, 293, 332, 136, 188, 154, 267, 45, 355, 301, 208, 351,
 	286, 127, 272, 137, 194
 ].map((el) => 365 - el);
+
 const popularEpisodes = episodes
 	.filter((episode) => sortedPopularEpisodesIds.includes(episode.id))
 	.sort((a, b) => sortedPopularEpisodesIds.indexOf(a.id) - sortedPopularEpisodesIds.indexOf(b.id));
