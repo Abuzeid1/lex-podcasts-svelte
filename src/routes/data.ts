@@ -67,7 +67,7 @@ const socialIcons = [
 ];
 // support icons import
 import paypal from '../lib/logos/paypal.svg';
-import patreon from '../lib/logos/patreon.svg';
+import patreon from '../lib/logos/Patreon.svg';
 
 const supportIcons = [
 	{
