@@ -9,6 +9,8 @@
 				<img
 					src={iconSrc}
 					alt={href}
+					height="56px"
+					width="63"
 					class:rounded-xl={href == 'https://www.youtube.com/lexclips'}
 					class="h-14 w-auto"
 				/>
