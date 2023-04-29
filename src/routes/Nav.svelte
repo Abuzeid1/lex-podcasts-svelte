@@ -8,15 +8,16 @@
 </script>
 
 <ul
-	class="mx-auto mb-14 flex w-max justify-center overflow-hidden rounded-2xl bg-gray-200 text-xl max-sm:flex-col sm:rounded-full "
+	class="mx-auto mb-14 flex w-max overflow-clip rounded-2xl bg-gray-200 text-xl max-sm:flex-col sm:rounded-full"
 >
 	{#each links as { title, href }}
 		<li>
 			<a
-				class={'block px-8 py-4 '}
+				class={'block px-8 py-4'}
 				class:bg-gray-300={$page.url.pathname == href}
 				{href}
 				data-sveltekit-noscroll
+				data-sveltekit-preload-code
 			>
 				{title}
 			</a>

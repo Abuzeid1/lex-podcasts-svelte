@@ -3,7 +3,6 @@
 	import EpisodesList from '../../EpisodesList.svelte';
 	import SecondaryHeader from '../../SecondaryHeader.svelte';
 	import { episodes, popularEpisodes } from '../../data';
-	console.log($page.params.characterName);
 </script>
 
 <EpisodesList

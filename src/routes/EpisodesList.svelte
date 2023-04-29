@@ -9,15 +9,15 @@
 </script>
 
 <ul
-	class="mx-auto flex w-9/12 max-w-7xl flex-wrap justify-center gap-x-4 gap-y-10 rounded-2xl px-10 py-20 shadow-2xl shadow-gray-400 md:w-11/12"
+	class="flex flex-wrap justify-center gap-x-4 gap-y-10 rounded-2xl px-10 py-20 shadow-2xl shadow-gray-400 "
 >
-	{#each episodes as { id, title, imgUrl, characterName, youtubeUrl }}
+	{#each episodes as { title, imgUrl, characterName, youtubeUrl }}
 		<li class="w-56">
 			<a href={youtubeUrl} target="_blank" rel="noreferrer">
 				<img
 					src={imgUrl}
-					width="210"
-					height="118"
+					width="224"
+					height="125.86"
 					alt={title}
 					class="w-full rounded-t-lg"
 					loading="lazy"
@@ -26,6 +26,7 @@
 			<a
 				href={'/character/' + encodeURIComponent(characterName)}
 				data-sveltekit-noscroll
+				data-sveltekit-preload-code
 				on:click={() => document.querySelector('h3')?.scrollIntoView()}
 			>
 				<span class="mt-4 block text-sm text-gray-500">
