@@ -1,5 +1,6 @@
 <script>
 	import '../app.css';
+	import { fly } from 'svelte/transition';
 	// import components
 	import PrimaryHeader from './PrimaryHeader.svelte';
 	import Paragraph from './Paragraph.svelte';
@@ -9,11 +10,14 @@
 	// import data
 
 	import { socialIcons, supportIcons, links } from './data';
+	const duration = 500;
+	const x = 300;
+	export let data;
 </script>
 
-<main class="bg-gray-50 grid gap-y-36 text-center pb-72  justify-items-center">
+<main class="bg-gray-50 grid gap-y-36 text-center pb-72 justify-items-center">
 	<header>
-		<ul class="flex w-screen max-w-7xl rounded-b-3xl bg-gray-200  text-lg text-gray-700">
+		<ul class="flex w-screen max-w-7xl rounded-b-3xl bg-gray-200 text-lg text-gray-700">
 			{#each links as { href, title, target }, index}
 				<li
 					class:max-md:hidden={index > 0}
@@ -48,7 +52,11 @@
 	<section class="w-9/12 max-w-7xl md:w-11/12">
 		<h3 class="scroll-m-24 mb-5 font-serif text-3xl font-bold text-gray-900">Episodes</h3>
 		<Nav />
-		<slot />
+		{#key data.url}
+			<div in:fly={{ duration, x: -x, delay: duration }} out:fly={{ duration, x }}>
+				<slot />
+			</div>
+		{/key}
 	</section>
 
 	<footer class="max-w-4xl">

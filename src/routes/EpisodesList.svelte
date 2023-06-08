@@ -9,7 +9,7 @@
 </script>
 
 <ul
-	class="flex flex-wrap justify-center gap-x-4 gap-y-10 rounded-2xl px-10 py-20 shadow-2xl shadow-gray-400 "
+	class="flex flex-wrap justify-center gap-x-4 gap-y-10 rounded-2xl px-10 py-20 shadow-2xl shadow-gray-400"
 >
 	{#each episodes as { title, imgUrl, characterName, youtubeUrl }}
 		<li class="w-56">

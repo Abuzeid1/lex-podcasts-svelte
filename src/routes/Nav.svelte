@@ -1,9 +1,10 @@
 <script>
 	import { page } from '$app/stores';
+
 	const links = [
-		{ href: '/', title: 'Show Recent' },
-		{ href: '/all', title: 'Show All' },
-		{ href: '/popular', title: 'Show Popular' }
+		{ href: '/', title: 'Recent' },
+		{ href: '/all', title: 'All' },
+		{ href: '/popular', title: 'Popular' }
 	];
 </script>
 
@@ -13,7 +14,7 @@
 	{#each links as { title, href }}
 		<li>
 			<a
-				class={'block px-8 py-4'}
+				class={'block px-10 py-4 relative'}
 				class:bg-gray-300={$page.url.pathname == href}
 				{href}
 				data-sveltekit-noscroll
@@ -24,3 +25,28 @@
 		</li>
 	{/each}
 </ul>
+
+<style>
+	:is(ul > :nth-child(2)) a {
+		@screen sm {
+			&::after,
+			&::before {
+				--width: 2px;
+				--height: 50%;
+				content: '';
+				position: absolute;
+				inset-block: calc((100% - var(--height)) / 2);
+				height: var(--height);
+				width: var(--width);
+				@apply bg-gray-400;
+				z-index: 5;
+			}
+			&::before {
+				inset-inline-start: calc(var(--width) / -2);
+			}
+			&::after {
+				inset-inline-end: calc(var(--width) / -2);
+			}
+		}
+	}
+</style>
