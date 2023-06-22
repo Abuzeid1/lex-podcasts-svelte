@@ -25,28 +25,3 @@
 		</li>
 	{/each}
 </ul>
-
-<style>
-	:is(ul > :nth-child(2)) a {
-		@screen sm {
-			&::after,
-			&::before {
-				--width: 2px;
-				--height: 50%;
-				content: '';
-				position: absolute;
-				inset-block: calc((100% - var(--height)) / 2);
-				height: var(--height);
-				width: var(--width);
-				@apply bg-gray-400;
-				z-index: 5;
-			}
-			&::before {
-				inset-inline-start: calc(var(--width) / -2);
-			}
-			&::after {
-				inset-inline-end: calc(var(--width) / -2);
-			}
-		}
-	}
-</style>
