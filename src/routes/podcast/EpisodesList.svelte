@@ -24,7 +24,7 @@
 				/>
 			</a>
 			<a
-				href={'/character/' + encodeURIComponent(characterName)}
+				href={'/podcast/' + encodeURIComponent(characterName)}
 				data-sveltekit-noscroll
 				data-sveltekit-preload-code
 				on:click={() => document.querySelector('h3')?.scrollIntoView()}

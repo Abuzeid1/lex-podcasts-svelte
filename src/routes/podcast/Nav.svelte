@@ -2,9 +2,9 @@
 	import { page } from '$app/stores';
 
 	const links = [
-		{ href: '/', title: 'Recent' },
-		{ href: '/all', title: 'All' },
-		{ href: '/popular', title: 'Popular' }
+		{ href: '/podcast', title: 'Recent' },
+		{ href: '/podcast/all', title: 'All' },
+		{ href: '/podcast/popular', title: 'Popular' }
 	];
 </script>
 

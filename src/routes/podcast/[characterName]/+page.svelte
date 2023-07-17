@@ -1,7 +1,7 @@
 <script>
 	import { page } from '$app/stores';
-	import EpisodesList from '../../EpisodesList.svelte';
-	import SecondaryHeader from '../../SecondaryHeader.svelte';
+	import EpisodesList from '../EpisodesList.svelte';
+	import SecondaryHeader from '../SecondaryHeader.svelte';
 	import { episodes, popularEpisodes } from '../../data';
 </script>
 
