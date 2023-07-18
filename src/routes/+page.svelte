@@ -33,18 +33,18 @@
 	</li>
 	<li>
 		<strong>Sample conversations: </strong>
-		<ul class="inline">
+		<ul class="inline [&>*]:inline">
 			{#each sampleEpisodes as { url, name }}
-				<li class="inline"><a href={url} target="_blank">{name}</a>, </li>
+				<li><a href={url} target="_blank">{name}</a>, </li>
 			{/each}
 		</ul>
 		etc.
 	</li>
 
 	<li class="my-8">
-		Connect with me @lexfridman on <ul class="inline">
+		Connect with me @lexfridman on <ul class="inline [&>*]:inline">
 			{#each socialNetworks as { url, name }}
-				<li class="inline after"><a target="_blank" href={url}>{name}</a>, </li>
+				<li ><a target="_blank" href={url}>{name}</a>, </li>
 			{/each}
 		</ul>
 	</li>
@@ -83,7 +83,7 @@
 					</h2>
 				</li>
 				<li>
-					<ul class="flex gap-x-1">
+					<ul class="inline [&>*]:inline">
 						{#if website}
 						<li>
 							<a target="_blank" href={website}>website</a> - 
@@ -100,8 +100,8 @@
 							<a target="_blank" href={paper}>Paper</a>
 						</li>
 						<li >
-							(cite: <ul class="inline-flex gap-2"><li>
-								<button class="text-blue-400" on:click={() => {
+							(cite: <ul class="inline [&>*]:inline"><li>
+								<button class="text-blue-400 " on:click={() => {
 									modalsRefs[i].showModal()
 								}}>BibTex</button>,
 							</li>
