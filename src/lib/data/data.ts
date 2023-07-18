@@ -82,13 +82,4 @@ const supportIcons = [
 	}
 ];
 
-const socialNetworks = [
-	{ url: 'https://twitter.com/LexFridman', name: 'Twitter' },
-	{ url: 'https://www.linkedin.com/in/lexfridman/', name: 'LinkedIn' },
-	{ url: 'https://www.instagram.com/lexfridman/', name: 'Instagram' },
-	{ url: 'https://www.facebook.com/lexfridman', name: 'Facebook' },
-	{ url: 'https://www.youtube.com/lexfridman', name: 'YouTube' },
-	{ url: 'https://medium.com/@lexfridman', name: 'Medium' }
-];
-
-export { socialIcons, supportIcons, links, socialNetworks };
+export { socialIcons, supportIcons, links };

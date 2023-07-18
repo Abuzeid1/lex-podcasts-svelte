@@ -1,15 +1,15 @@
 <script lang="ts">
-	import { socialNetworks } from '$lib/data/data';
-	import { publications } from '$lib/data/publications';
-	import { sampleEpisodes } from '$lib/data/episodes';
+
+	import { publications, socialNetworks } from '$lib/data/publications';
+	import { sampleEpisodes } from '$lib/data/sampleEpisodes';
 	import img from '$lib/images/lex_fridman.jpg'
 
 	let modalsRefs:HTMLDialogElement[] = []
 </script>
 
-<ul class="grid list text-left max-w-5xl gap-x-4 w-11/12 text-lg">
+<ul class="grid list text-left max-w-5xl gap-x-4 w-11/12 text-lg max-sm:grid-cols-1">
 	<li class="w-full">
-		<img src={img} class="block max-w-full" alt="lex fridman in front of a black board" />
+		<img src={img} class="w-full" alt="lex fridman in front of a black board" />
 	</li>
 	<li>
 		<strong>Lex Fridman</strong> <span class="text-gray-600">(pronounced: Freedman)</span>
@@ -35,16 +35,16 @@
 		<strong>Sample conversations: </strong>
 		<ul class="inline">
 			{#each sampleEpisodes as { url, name }}
-				<li class="inline after"><a href={url} target="_blank">{name}</a></li>
+				<li class="inline"><a href={url} target="_blank">{name}</a>, </li>
 			{/each}
 		</ul>
 		etc.
 	</li>
 
 	<li class="my-8">
-		Connect with me @lexfridman on <ul class="inline social-accounts">
+		Connect with me @lexfridman on <ul class="inline">
 			{#each socialNetworks as { url, name }}
-				<li class="inline after"><a target="_blank" href={url}>{name}</a></li>
+				<li class="inline after"><a target="_blank" href={url}>{name}</a>, </li>
 			{/each}
 		</ul>
 	</li>
@@ -64,7 +64,7 @@
 
 <section>
 
-	<h2 class="text-3xl mb-8">
+	<h2 class="text-3xl mb-16">
 		Research and Publications <span class="text-lg"
 		>(<a target="_blank" href="https://scholar.google.com/citations?user=wZH_N7cAAAAJ&hl=en&oi=sra"
 		>Google Scholar</a
@@ -72,11 +72,11 @@
 		>
 	</h2>
 	
-	<ul class="max-w-5xl grid gap-y-10" >
+	<ul class="max-w-5xl grid gap-y-10 mx-auto text-left w-11/12" >
 		{#each publications as  {img, title, paper,video, website, BibTex, scholar, summary}, i (title)}
-		<li class="flex text-left gap-4 max-sm:flex-wrap">
+		<li class="flex gap-4 max-sm:flex-wrap ">
 			<img src={img.src} alt={img.alt} class="w-64 object-contain">
-			<ul class=" ">
+			<ul>
 				<li>
 					<h2 class="text-xl text-gray-900 font-bold">
 						{title}
@@ -85,15 +85,17 @@
 				<li>
 					<ul class="flex gap-x-1">
 						{#if website}
-						<li class="after-">
-							<a target="_blank" href={website}>website</a>
+						<li>
+							<a target="_blank" href={website}>website</a> - 
 						</li>
 						{/if}
+
 						{#if video}
-						<li class="after-">
-							<a target="_blank" href={video}>video</a>
+						<li>
+							<a target="_blank" href={video}>video</a> - 
 						</li>
 						{/if}
+
 						<li >
 							<a target="_blank" href={paper}>Paper</a>
 						</li>
@@ -125,7 +127,7 @@
 			<button class="w-full h-full cursor-default" tabindex="-1"></button>
 			<button class="text-7xl text-gray-200 top-3 right-6 fixed">x</button>
 		</form>
-		<p bind:innerHTML={BibTex} contenteditable="false" class="text-left  max-w-5xl w-11/12 bg-white rounded-lg px-8 py-16 z-20 break-words ">
+		<p bind:innerHTML={BibTex} contenteditable="false" class="max-w-5xl w-11/12 bg-white rounded-lg px-8 py-16 z-20 break-words ">
 			google
 		</p>
 	</dialog>
@@ -138,7 +140,8 @@
 
 <style>
 	ul.list {
-		grid-template-columns: 10rem 1fr;
+		@media (min-width: 450px) {
+			grid-template-columns: 10rem 1fr;
 		
 		& > :first-child {
 			grid-row: 1/7;
@@ -150,23 +153,17 @@
 		& > :nth-child(n + 8) {
 			grid-column: 1/3;
 		}
+		}
 	}
+
 	a {
 		@apply text-blue-400;
 	}
-	.after::after {
-		content: ', ';
-	}
-	.social-accounts > :last-child::after {
-		content: '.';
-	}
+
 	.others > li::before {
 		content: '- ';
 	}
-	.after-::after {
-		content: '-';
-		margin-inline-start: .25rem;
-	}
+
 
 </style>
 

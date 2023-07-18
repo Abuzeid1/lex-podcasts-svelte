@@ -153,4 +153,14 @@ const publications: publications = [
 	}
 ];
 publications.forEach((el) => (el.BibTex = el.BibTex.replaceAll(',', ',<br>')));
-export { publications };
+
+const socialNetworks = [
+	{ url: 'https://twitter.com/LexFridman', name: 'Twitter' },
+	{ url: 'https://www.linkedin.com/in/lexfridman/', name: 'LinkedIn' },
+	{ url: 'https://www.instagram.com/lexfridman/', name: 'Instagram' },
+	{ url: 'https://www.facebook.com/lexfridman', name: 'Facebook' },
+	{ url: 'https://www.youtube.com/lexfridman', name: 'YouTube' },
+	{ url: 'https://medium.com/@lexfridman', name: 'Medium' }
+];
+
+export { publications, socialNetworks };

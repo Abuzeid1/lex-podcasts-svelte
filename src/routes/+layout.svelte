@@ -1,9 +1,9 @@
 <script>
-	// global css file import
+	
 	import '../app.css';
-
 	import { links } from '$lib/data/data';
 	import { page } from '$app/stores';
+
 </script>
 
 <main class="bg-gray-50 grid gap-y-36 text-center pb-72 justify-items-center">
