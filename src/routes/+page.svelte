@@ -1,6 +1,8 @@
 <script lang="ts">
-	import { publications, sampleEpisodes, socialNetworks } from './data';
-	import img from './lex_fridman.jpg';
+	import { socialNetworks } from '$lib/data/data';
+	import { publications } from '$lib/data/publications';
+	import { sampleEpisodes } from '$lib/data/episodes';
+	import img from '$lib/images/lex_fridman.jpg'
 
 	let modalsRefs:HTMLDialogElement[] = []
 </script>
@@ -72,7 +74,7 @@
 	
 	<ul class="max-w-5xl grid gap-y-10" >
 		{#each publications as  {img, title, paper,video, website, BibTex, scholar, summary}, i (title)}
-		<li class="flex text-left gap-x-4">
+		<li class="flex text-left gap-4 max-sm:flex-wrap">
 			<img src={img.src} alt={img.alt} class="w-64 object-contain">
 			<ul class=" ">
 				<li>
@@ -118,13 +120,13 @@
 	
 
 
-	<dialog bind:this={modalsRefs[i]} class="bg-black bg-opacity-80 m-0 p-0 max-w-none max-h-none w-screen h-screen backdrop-blur-xl" >
-		<form method="dialog" class="absolute top-0 right-0 w-full h-full">
-			<button class="text-7xl text-gray-200 top-3 right-6 absolute ">x</button>
-			<button class="text-7xl text-gray-200 w-full h-full" tabindex="-1"></button>
+	<dialog bind:this={modalsRefs[i]} class="bg-transparent backdrop:bg-black backdrop:bg-opacity-80 backdrop:backdrop-blur-2xl isolate" >
+		<form method="dialog" class="fixed top-0 right-0 w-screen h-screen -z-10 ">
+			<button class="w-full h-full cursor-default" tabindex="-1"></button>
+			<button class="text-7xl text-gray-200 top-3 right-6 fixed">x</button>
 		</form>
-		<p bind:innerHTML={BibTex} contenteditable="false" class="text-left absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-5xl w-11/12 bg-white rounded-lg px-8 py-16">
-
+		<p bind:innerHTML={BibTex} contenteditable="false" class="text-left  max-w-5xl w-11/12 bg-white rounded-lg px-8 py-16 z-20 break-words ">
+			google
 		</p>
 	</dialog>
 	

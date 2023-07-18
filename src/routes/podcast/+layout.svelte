@@ -1,14 +1,14 @@
 <script>
 	import { fly } from 'svelte/transition';
 	// import components
-	import PrimaryHeader from './PrimaryHeader.svelte';
-	import Paragraph from './Paragraph.svelte';
-	import SecondaryHeader from './SecondaryHeader.svelte';
-	import IconsList from './IconsList.svelte';
-	import Nav from './Nav.svelte';
+	import PrimaryHeader from '$lib/components/PrimaryHeader.svelte';
+	import Paragraph from '$lib/components/Paragraph.svelte';
+	import SecondaryHeader from '$lib/components/SecondaryHeader.svelte';
+	import IconsList from '$lib/components/IconsList.svelte';
+	import Nav from '$lib/components/Nav.svelte';
 	// import data
 
-	import { socialIcons, supportIcons, links } from '../data';
+	import { socialIcons, supportIcons } from '$lib/data/data';
 	import { page } from '$app/stores';
 	const duration = 500;
 	const x = 300;

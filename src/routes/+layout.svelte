@@ -2,7 +2,7 @@
 	// global css file import
 	import '../app.css';
 
-	import { links } from './data';
+	import { links } from '$lib/data/data';
 	import { page } from '$app/stores';
 </script>
 
