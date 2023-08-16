@@ -14,8 +14,14 @@
 <title>Lex Fridman</title>
 <meta property="og:title" content="lex Fridman v2" />
 <meta property="og:description" content="Revamp of Lex Fridman website optimizing performance & design" />
-<meta property='og:video' content="https://lex-podcasts-svelte.vercel.app/testmp4video.mp4" autoplay="true" />
-<meta property='og:video:secure_url' content="https://lex-podcasts-svelte.vercel.app/testmp4video.mp4" autoplay="true"/>
+
+<meta property='og:image' content='https://lex-podcasts-svelte.vercel.app/2015_active_authentication_on_mobile_devices_via_stylometry.png'>
+<meta property='og:image' content='https://lex-podcasts-svelte.vercel.app/2016_automated_synchronization_of_driving_data_using.png'>
+<meta property='og:image' content='https://lex-podcasts-svelte.vercel.app/2016_driver_gaze_region_estimation_without_use_of_eye.png'>
+<meta property='og:image' content='https://lex-podcasts-svelte.vercel.app/2017_what_can_be_predicted_from_6_seconds_of_driver_glances.png'>
+
+<meta property='og:video' content="https://lex-podcasts-svelte.vercel.app/testmp4video.mp4" />
+<meta property='og:video:secure_url' content="https://lex-podcasts-svelte.vercel.app/testmp4video.mp4"/>
 <meta property='og:video:type' content="video/mp4" />
 <meta property="og:video:width" content="400" />
 <meta property="og:video:height" content="300" />
