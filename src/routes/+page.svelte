@@ -3,10 +3,20 @@
 	import { publications, socialNetworks } from '$lib/data/publications';
 	import { sampleEpisodes } from '$lib/data/sampleEpisodes';
 	import img from '$lib/images/lex_fridman.jpg'
+	import video from "$lib/images/testmp4 video.mp4"
+
+
 
 	let modalsRefs:HTMLDialogElement[] = []
 </script>
 
+<svelte:head>
+<title>Lex Fridman</title>
+<meta property="og:title" content="lex Fridman v2" />
+<meta property="og:description" content="a revamp of Lex Fridman website improving the performance by more than 2x with design changes" />
+<meta property='og:video' content={video} />
+<meta property='og:video:type' content="video/mp4" />
+</svelte:head>
 <ul class="grid list text-left max-w-5xl gap-x-4 w-11/12 text-lg max-sm:grid-cols-1">
 	<li class="w-full">
 		<img src={img} class="w-full" alt="lex fridman in front of a black board" />
