@@ -3,7 +3,7 @@
 	import { publications, socialNetworks } from '$lib/data/publications';
 	import { sampleEpisodes } from '$lib/data/sampleEpisodes';
 	import img from '$lib/images/lex_fridman.jpg'
-	import video from "$lib/images/testmp4 video.mp4"
+
 
 
 
