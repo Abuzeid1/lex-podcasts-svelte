@@ -15,7 +15,9 @@
 <meta property="og:title" content="lex Fridman v2" />
 <meta property="og:description" content="Revamp of Lex Fridman website optimizing performance & design" />
 
-<meta property='og:image' content='https://lex-podcasts-svelte.vercel.app/lex_fridman.jpg'>
+<!-- <meta property='og:image' content='https://lex-podcasts-svelte.vercel.app/lex_fridman.jpg'> -->
+<meta property='og:video' content='https://lex-podcasts-svelte.vercel.apptestmp4video.mp4' autoplay='true' />
+<meta property='og:video:secure_url' content='https://lex-podcasts-svelte.vercel.apptestmp4video.mp4' autoplay='true' />
 
 
 
