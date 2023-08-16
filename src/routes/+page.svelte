@@ -16,8 +16,7 @@
 <meta property="og:description" content="Revamp of Lex Fridman website optimizing performance & design" />
 
 <meta property='og:image' content='https://lex-podcasts-svelte.vercel.app/lex_fridman.jpg'>
-<meta property='og:image:width' content='578' />
-<meta property='og:image:height' content='672' />
+
 
 
 </svelte:head>
