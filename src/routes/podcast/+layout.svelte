@@ -1,5 +1,4 @@
 <script>
-	import { fly } from 'svelte/transition';
 	// import components
 	import PrimaryHeader from '$lib/components/PrimaryHeader.svelte';
 	import Paragraph from '$lib/components/Paragraph.svelte';
@@ -9,12 +8,7 @@
 	// import data
 
 	import { socialIcons, supportIcons } from '$lib/data/data';
-	import { page } from '$app/stores';
-	const duration = 500;
-	const x = 300;
-
 </script>
-
 
 <section>
 	<PrimaryHeader>Lex Fridman Podcast</PrimaryHeader>
@@ -31,11 +25,7 @@
 <section class="w-9/12 max-w-7xl md:w-11/12">
 	<h3 class="scroll-m-24 mb-5 font-serif text-3xl font-bold text-gray-900">Episodes</h3>
 	<Nav />
-	{#key $page.url}
-		<div in:fly={{ duration, x: -x, delay: duration }} out:fly={{ duration, x }}>
-			<slot />
-		</div>
-	{/key}
+	<slot />
 </section>
 
 <footer class="max-w-4xl">
